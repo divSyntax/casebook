@@ -1,0 +1,127 @@
+/* UI styling matching your Casebook dark theme theme */
+        body {
+            background-color: #12141c;
+            color: #e3e6ed;
+            font-family: system-ui, -apple-system, sans-serif;
+        }
+        .case-card {
+            background-color: #1a1d26;
+            border: 1px solid #2a2f3d;
+            border-radius: 8px;
+            padding: 2rem;
+            max-width: 700px;
+            margin: 2rem auto;
+        }
+        hr {
+            border-color: #2a2f3d;
+            margin: 1.75rem 0;
+            opacity: 1;
+        }
+        .form-control, .form-control:focus {
+            background-color: #12141c;
+            border: 1px solid #2a2f3d;
+            color: #e3e6ed;
+        }
+        .form-control:focus {
+            border-color: #4d5773;
+            box-shadow: none;
+        }
+        .search-results-dropdown {
+            position: absolute;
+            width: 100%;
+            z-index: 1000;
+            background-color: #1a1d26;
+            border: 1px solid #2a2f3d;
+            border-top: none;
+            max-height: 250px;
+            overflow-y: auto;
+            border-radius: 0 0 4px 4px;
+        }
+        .dropdown-item-movie {
+            padding: 0.75rem 1rem;
+            cursor: pointer;
+            border-bottom: 1px solid #12141c;
+        }
+        .dropdown-item-movie:hover {
+            background-color: #242936;
+        }
+        .btn-custom-primary {
+            background-color: #cda252;
+            color: #12141c;
+            font-weight: 600;
+            border: none;
+        }
+        .btn-custom-primary:hover {
+            background-color: #b38c43;
+            color: #12141c;
+        }
+        .btn-custom-secondary {
+            background-color: #242936;
+            color: #e3e6ed;
+            border: 1px solid #3a4154;
+        }
+        .btn-custom-secondary:hover {
+            background-color: #2a2f3d;
+            color: #e3e6ed;
+        }
+        .question-item {
+            background-color: #12141c;
+            border: 1px solid #2a2f3d;
+            padding: 0.5rem 0.75rem;
+            border-radius: 4px;
+            margin-bottom: 0.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        #version
+        {
+            float: right;
+            padding: 2%;
+        }
+
+
+       /* The hidden blur state wrapper */
+        .synopsis-blur-wrapper {
+            filter: blur(8px);
+            user-select: none; 
+            pointer-events: none; 
+            transition: filter 0.2s ease-in-out;
+        }
+
+        /* Clear unblurred state */
+        .synopsis-blur-wrapper.revealed {
+            filter: blur(0) !important;
+            user-select: text;
+            pointer-events: auto;
+        }
+        /* The visual Reveal Button overlay styling */
+        .reveal-btn-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 10;
+        }
+
+
+
+
+        /* Register the custom font file */
+@font-face {
+    font-family: 'TheNautigal';
+    src: url('../font/TheNautigal-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap; /* Keeps text readable while loading */
+}
+
+/* Style your specific layout header container */
+.logo-header h1 {
+    font-family: 'TheNautigal', cursive, sans-serif;
+    font-size: 3.5rem;   /* This is a script/handwritten font, so it usually needs to be quite large to look good! */
+    font-weight: bold;
+    color: #cda252;      /* Matches your golden investigator accent color */
+    letter-spacing: 1px;
+}
